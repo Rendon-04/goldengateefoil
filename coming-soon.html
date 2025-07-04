@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golden Gate Efoil</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    .hero {
+      background: url('images/background-image.png') center center / cover no-repeat;
+      height: 100vh;
+      position: relative;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    
+    }
+
+    .hero h1 {
+      font-size: 4em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .phone-number {
+      background: rgba(0,0,0,0.7);
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1.2em;
+      display: inline-block;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 20px;
+      font-size: 2em;
+      cursor: pointer;
+      animation: bounce 2s infinite;
+    }
+
+     .title {
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  /* border-radius: 1px; */
+  display: inline-block;
+}
+    .title h1 {
+    font-size: 24px;   
+    font-weight: normal; 
+    } 
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .about {
+      background: #000;
+      padding: 20px 20px;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .contact {
+      color: #ccc;
+      font-size: 0.9em;
+    }
+
+    footer {
+      background: #222;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.8em;
+      color: #999;
+    }
+
+    .logo-container {
+      position: fixed;    
+      top: 10px;
+      right: 10px;
+      width: 120px;        
+      height: auto;
+      z-index: 9999;       
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: 50%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="images/lift-logo.png" alt="Lift Logo" />
+  </div>
+  <div class="hero">
+    <div style="position: center; top: 20px; left: 20px; background: rgba(0, 0, 0, 0.5); padding: 5px 211.5px;  font-size: 3em;">
+      Golden Gate Efoil
+    </div>
+    <div class="title">
+    <h1> Coming Soon - Site Under Construction</h1>
+    <h1>(Thanks for understanding, we spend most of our time out on the water)</h1>
+
+    <div class="phone-number">Ready for Liftoff? Call Us: (415) 636-0577</div>
+  </div>
+    <div class="scroll-down" onclick="document.querySelector('.about').scrollIntoView({behavior: 'smooth'})">
+      &#x25BC;
+    </div>
+  </div>
+  <div class="about">
+    <p>
+      Private Efoil Lessons, Demos, & Guided Rides on the San Francisco Bay
+      Personalized instruction tailored to your goals
+      No experience needed: All skill levels welcome
+      Never stepped on a board? We got you. Already foiling? Let's level up 
+    </p>
+    <p>
+      500+ Efoil Lessons Taught |
+      25+ Years Guiding and Outdoor Instruction |
+      Official Lift Foils Partner
+    </p>
+    <p>Fly with the pelicans!</p>
+    <div class="contact">
+      San Francisco, CA 94123<br/>
+      Email: info@goldengateefoil.com | (415) 636-0577 
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Golden Gate Efoil
+  </footer>
+
+</body>
+</html>
