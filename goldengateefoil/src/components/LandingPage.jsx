@@ -5,7 +5,7 @@ import InstagramIcon from "./images/instagram.png"
 import TrustIcon from './images/trust.png';
 import CoachIcon from './images/coach.png';
 import QualityIcon from './images/quality.png';
-
+import Logo from './images/gg-logo.svg';
 
 
 
@@ -27,8 +27,8 @@ function LandingPage() {
           <div className="nav-brand">
             <img
               className="brand-logo"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/693ea2401d0ec4f0fdcb3dfe061032b60e25462e?width=60"
-              alt=""
+              src={Logo}
+              alt="Logo for efoiling"
             />
             <div className="brand-text">Golden Gate Efoil</div>
           </div>
@@ -202,8 +202,9 @@ function LandingPage() {
       <div className="centered-cta" id="contact">
         <div className="cta-title">Contact us</div>
         <div className="cta-description">
-          Schedule your first lesson or ask us a question. Gear is included, no
-          experience needed
+          Schedule your first lesson or ask us a question. 
+          <br />
+          Gear is included, no experience needed
           <br />
           <br />
           Golden Gate Efoil
@@ -232,11 +233,11 @@ function LandingPage() {
         <div className="credits">
           <img
             className="credits-logo"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/693ea2401d0ec4f0fdcb3dfe061032b60e25462e?width=60"
-            alt=""
+            src={Logo}
+            alt="efoil logo"
           />
           <div className="credits-content">
-            <div className="copyright">© 2025 Golden Gate Efoil.</div>
+            <div className="copyright"> 2025 Golden Gate Efoil</div>
           </div>
           <div className="rights-reserved">All Rights Reserved</div>
         </div>

@@ -58,8 +58,8 @@
 }
 
 .brand-logo {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
   position: relative;
 }
@@ -92,7 +92,7 @@
   top: auto;
   border-radius: 0;
   flex-wrap: wrap;
-  margin-right: 10px;
+  margin-right: 24px;
 }
 
 
@@ -536,8 +536,8 @@ a {
 }
 
 .credits-logo {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
   position: relative;
 }
@@ -666,6 +666,19 @@ a {
   .landing-page {
     padding: 0 20px;
   }
+
+  @media(max-width:768px) {
+    .features-carousel {
+      padding-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .features-image-wrapper {
+      height: auto;
+    }
+  }
+  
 
   .hero-title {
     font-size: 50px;
