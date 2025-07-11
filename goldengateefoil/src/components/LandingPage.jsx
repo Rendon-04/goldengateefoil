@@ -6,21 +6,23 @@ import TrustIcon from './images/trust.png';
 import CoachIcon from './images/coach.png';
 import QualityIcon from './images/quality.png';
 import Logo from './images/gg-logo.svg';
+import { useState } from "react";
 
 
 
 function LandingPage() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   function scrollToSection(id) {
     const section = document.getElementById(id);
-    if(section) {
-      section.scrollIntoView({ behavior: "smooth"})
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
+    setMenuOpen(false); // close mobile menu after clicking a link
   }
 
   return (
     <div className="landing-page">
-      
       {/* Navigation */}
       <div className="navigation-wrapper">
         <div className="navigation">
@@ -32,24 +34,53 @@ function LandingPage() {
             />
             <div className="brand-text">Golden Gate Efoil</div>
           </div>
-      {/* Floating Navigation */}
-      <div className="floating-nav">
-        <div className="nav-item" style={{ cursor: "pointer" }} onClick={() => scrollToSection("ride")}>Ride</div>
-        <div className="nav-item" style={{ cursor: "pointer" }} onClick={() => scrollToSection("why-us")}>Why Us</div>
-        <div className="nav-item" style={{ cursor: "pointer" }} onClick={() => scrollToSection("contact")}>Contact Us</div>
-        <a
-          href="https://www.instagram.com/goldengateefoil/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav-item nav-icon-item"
-        >
-          <img
-            src={InstagramIcon}
-            alt="Instagram"
-            className="nav-icon"
-          />
-        </a>
-      </div>
+
+          {/* Hamburger Icon - only visible on mobile */}
+          <button
+            className="hamburger"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            ☰
+          </button>
+
+          {/* Floating Navigation */}
+          <div
+            className={`floating-nav ${menuOpen ? "mobile-open" : ""}`}
+          >
+            <div
+              className="nav-item"
+              style={{ cursor: "pointer" }}
+              onClick={() => scrollToSection("ride")}
+            >
+              Ride
+            </div>
+            <div
+              className="nav-item"
+              style={{ cursor: "pointer" }}
+              onClick={() => scrollToSection("why-us")}
+            >
+              Why Us
+            </div>
+            <div
+              className="nav-item"
+              style={{ cursor: "pointer" }}
+              onClick={() => scrollToSection("contact")}
+            >
+              Contact Us
+            </div>
+            <a
+              href="https://www.instagram.com/goldengateefoil/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-item nav-icon-item"
+            >
+              <img
+                src={InstagramIcon}
+                alt="Instagram"
+                className="nav-icon"
+              />
+            </a>
+          </div>
 
       {/* Instagram Icon Nav Item */}
       
@@ -120,7 +151,7 @@ function LandingPage() {
       <div className="content-section" id="why-us">
         <div className="content-wrapper">
           <div className="specs-label">Specs</div>
-          <div className="content-title">Why Choose Golden Gate Efoil?</div>
+          <div className="content-title">Golden Gate Efoil</div>
           <div className="icons-module">
             <div className="icon-lockup">
               <img
@@ -202,7 +233,9 @@ function LandingPage() {
       <div className="centered-cta" id="contact">
         <div className="cta-title">Contact us</div>
         <div className="cta-description">
-          Schedule your first lesson or ask us a question. 
+        Private Efoil Lessons, Demos, & Guided Rides 
+        <br />
+        Year-round on the San Francisco Bay
           <br />
           Gear is included, no experience needed
           <br />
