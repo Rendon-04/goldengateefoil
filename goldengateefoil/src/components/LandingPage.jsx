@@ -6,12 +6,13 @@ import TrustIcon from './images/trust.png';
 import CoachIcon from './images/coach.png';
 import QualityIcon from './images/quality.png';
 import Logo from './images/gg-logo.svg';
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 
 
 function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef(null);
 
   function scrollToSection(id) {
     const section = document.getElementById(id);
@@ -20,6 +21,24 @@ function LandingPage() {
     }
     setMenuOpen(false); // close mobile menu after clicking a link
   }
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      // If menu is open and click was outside the floating nav, close it
+      if (
+        menuOpen &&
+        navRef.current &&
+        !navRef.current.contains(event.target)
+      ) {
+        setMenuOpen(false);
+      }
+    }
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [menuOpen]);
 
   return (
     <div className="landing-page">
@@ -38,13 +57,17 @@ function LandingPage() {
           {/* Hamburger Icon - only visible on mobile */}
           <button
             className="hamburger"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setMenuOpen(!menuOpen)
+            }}
           >
             ☰
           </button>
 
           {/* Floating Navigation */}
           <div
+            ref={navRef}
             className={`floating-nav ${menuOpen ? "mobile-open" : ""}`}
           >
             <div
@@ -84,7 +107,7 @@ function LandingPage() {
 
       {/* Instagram Icon Nav Item */}
       
-          <Button variant="linkout" onClick={() => scrollToSection("contact")}>Contact Us</Button>
+          <Button className="contact-button" variant="linkout" onClick={() => scrollToSection("contact")}>Contact Us</Button>
         </div>
         
       </div>
@@ -206,7 +229,7 @@ function LandingPage() {
               </div>
             </div>
           </div>
-          <Button variant="primary" onClick={() => scrollToSection("contact")}>Contact Us</Button>
+          <Button className="contact-button" variant="primary" onClick={() => scrollToSection("contact")}>Contact Us</Button>
         </div>
       </div>
 
@@ -252,10 +275,10 @@ function LandingPage() {
         </div>
         <div className="cta-buttons">
         <a href="mailto:info@goldengateefoil.com">
-          <Button variant="secondary">Email us</Button>
+          <Button className="info-button" variant="secondary">Email us</Button>
       </a>
         <a href="tel:+14156360577">
-          <Button variant="linkout">Call us</Button>
+          <Button className="info-button" variant="linkout">Call us</Button>
       </a>
         </div>
       </div>

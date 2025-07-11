@@ -589,7 +589,7 @@ a {
 
 
 /* Button Styles */
-.button {
+.contact-button {
   display: flex;
   padding: 14px 22px;
   justify-content: center;
@@ -614,22 +614,22 @@ a {
   position: relative;
 }
 
-.button-primary {
+.contact-button-primary {
   background: #c6dcec;
   color: #000;
 }
 
-.button-secondary {
+.contact-button-secondary {
   background: #c6dcec;
   color: #000;
 }
 
-.button-linkout {
+.contact-button {
   background: #0f6aa7;
   color: #fff;
 }
 
-.button:hover {
+.contact-button:hover {
   opacity: 0.9;
   transition: opacity 0.2s ease;
 }
@@ -639,6 +639,45 @@ a {
   transition: opacity 0.2s ease;
 }
 
+.info-button {
+  display: flex;
+  padding: 14px 22px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  font-family:
+    "DM Sans",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: -0.35px;
+  position: relative;
+}
+
+.info-button-secondary {
+  background: #c6dcec;
+  color: #000;
+}
+
+.info-button {
+  background: #0f6aa7;
+  color: #fff;
+}
+
+.info-button:hover {
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
 /* Responsive Design */
 @media (max-width: 1320px) {
   .landing-page {
@@ -749,9 +788,11 @@ a {
   }
 
   .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
   }
 
   .cta-buttons .button {
@@ -850,6 +891,12 @@ a {
 
   .floating-nav .nav-item {
     margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-button {
+    display: none;
   }
 }
 
