@@ -1,6 +1,6 @@
 import Button from "./Button";
-import toddImage from "./images/todd.png";
-import Bridge from "./images/ggbridge.jpg"
+import toddImage from "/public/ToddBridge.mp4";
+import Bridge from "/public/ToddHome.mp4";
 import InstagramIcon from "./images/instagram.png"
 import TrustIcon from './images/trust.png';
 import CoachIcon from './images/coach.png';
@@ -117,11 +117,15 @@ function LandingPage() {
         <div className="hero-title">Fly with the Pelicans</div>
         <div className="hero-image">
           
-          <img
-          className="hero-video"
-          src={toddImage}
-          alt="Todd"
-        />
+        <video
+        className="hero-video"
+        src={toddImage}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+
         </div>
       </div>
 
@@ -162,11 +166,14 @@ function LandingPage() {
         </div>
         {/* video */}
           <div className="features-image-wrapper">
-          <img
-            className="features-image"
-            src={Bridge}
-            alt=""
-          />
+          <video
+          className="features-image"
+          src={Bridge}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
         </div>
       </div>
 
