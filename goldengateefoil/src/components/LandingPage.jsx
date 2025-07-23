@@ -1,6 +1,4 @@
 import Button from "./Button";
-import toddImage from "/public/ToddBridge.mp4";
-import Bridge from "/public/ToddHome.mp4";
 import InstagramIcon from "./images/instagram.png"
 import TrustIcon from './images/trust.png';
 import CoachIcon from './images/coach.png';
@@ -119,7 +117,7 @@ function LandingPage() {
           
         <video
         className="hero-video"
-        src={toddImage}
+        src="https://res.cloudinary.com/drmgn21d2/video/upload/v1753218477/ToddBridge_ahy4uq.mp4"
         autoPlay
         loop
         muted
@@ -168,12 +166,13 @@ function LandingPage() {
           <div className="features-image-wrapper">
           <video
           className="features-image"
-          src={Bridge}
+          src="https://res.cloudinary.com/drmgn21d2/video/upload/v1753218475/ToddHome_zp3tdo.mp4"
           autoPlay
           loop
           muted
           playsInline
         />
+
         </div>
       </div>
 
