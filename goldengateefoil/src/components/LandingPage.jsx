@@ -117,7 +117,7 @@ function LandingPage() {
           
         <video
         className="hero-video"
-        src="https://res.cloudinary.com/drmgn21d2/video/upload/v1753218477/ToddBridge_ahy4uq.mp4"
+        src="https://my-site-media-todd.s3.amazonaws.com/ToddBridge.mp4"
         autoPlay
         loop
         muted
@@ -166,7 +166,7 @@ function LandingPage() {
           <div className="features-image-wrapper">
           <video
           className="features-image"
-          src="https://res.cloudinary.com/drmgn21d2/video/upload/v1753218475/ToddHome_zp3tdo.mp4"
+          src="https://my-site-media-todd.s3.us-east-2.amazonaws.com/ToddHome.mp4"
           autoPlay
           loop
           muted
