@@ -524,6 +524,127 @@ a {
   border-top: 2px solid #969494;
 }
 
+
+/* reviews */
+/* Container */
+.reviews {
+  --card-radius: 16px;
+  --card-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 18px 36px rgba(0, 0, 0, 0.10);
+  --border: 1px solid rgba(0, 0, 0, 0.06);
+  --text: #1a1a1a;
+  --muted: #5b5b5b;
+  --bg: #ffffff;
+  --star: #f7b500; /* gold */
+  padding: 40px 16px;
+}
+
+.reviews__grid {
+  /* 3 across on wide, then wrap to 2/1 automatically */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Staggered second row look: push bottom row down a little on wide screens */
+@media (min-width: 960px) {
+  .review-card:nth-child(n + 4) {
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviews__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.review-card {
+  background: var(--bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: var(--border);
+  padding: 24px;
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.review-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Header row (avatar + name + stars) */
+.review-card__header {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  grid-gap: 14px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.review-card__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.review-card__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.review-card__name {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.1;
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Stars */
+.stars {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background: transparent;
+  border: 1.5px solid var(--star);      /* outlines empty star */
+  border-radius: 3px;                    /* fallback if mask fails */
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E") center / 18px 18px no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E") center / 18px 18px no-repeat;
+}
+
+.star.filled {
+  background: var(--star);
+  border-color: var(--star);
+}
+
+/* Text */
+.review-card__text {
+  margin: 10px 4px 4px 4px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+
 .credits {
   display: flex;
   width: 100%;

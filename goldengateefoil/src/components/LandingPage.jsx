@@ -38,6 +38,61 @@ function LandingPage() {
     };
   }, [menuOpen]);
 
+  const Stars = ({ count = 5 }) => (
+    <div className="stars" aria-label={`${count} out of 5 stars`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <span key={i} className={`star ${i < count ? "filled" : ""}`} />
+      ))}
+    </div>
+  );
+  
+  const reviews = [
+    {
+      id: 1,
+      name: "Fisherman’s\nLife",
+      avatar:
+        "src/components/images/fishermansLife.jpg",
+      rating: 5,
+      text: "This is pretty cool! Damn y’all this is hella fun!",
+    },
+    {
+      id: 2,
+      name: "Andrewtoursf",
+      avatar:
+        "/src/components/images/andrewTours.jpg",
+      rating: 5,
+      text:
+        "Finally checked this off my SF bucket list!...it feels like you’re flying!! It was so insane…10 out of 10. I’d do this again!",
+    },
+    {
+      id: 3,
+      name: "Kenziritotheburrito",
+      avatar:
+        "/src/components/images/kensitotheBurritio.jpg",
+      rating: 5,
+      text:
+        "This was genuinely one of the most fun new activities I’ve tried in forever… Such a good instructor and we had so much fun out there. Cannot recommend enough!!!",
+    },
+    {
+      id: 4,
+      name: "natalie_linan",
+      avatar:
+        "/src/components/images/natalieLinan.jpg",
+      rating: 5,
+      text:
+        "Are you kidding!? Seriously such a cool thing to say I have done in my life!",
+    },
+    {
+      id: 5,
+      name: "nature_nomad_world",
+      avatar:
+        "/src/components/images/natureNomad.jpg",
+      rating: 5,
+      text:
+        "Magical!!… It was an unforgettable mix of soaring over the water… filled with pure joy and adrenaline. One thing’s for sure: it was my first time, but definitely not my last…",
+    },
+  ];
+
   return (
     <div className="landing-page">
       {/* Navigation */}
@@ -257,6 +312,46 @@ function LandingPage() {
       </div>
 
 
+       {/* Reviews */}
+     {/* Reviews */}
+      <div className="content-section" id="reviews">
+        <div className="content-wrapper">
+          <div className="specs-label">Reviews</div>
+          <div className="content-title">What riders are saying</div>
+
+          <div className="reviews">
+            <div className="reviews__grid">
+              {reviews.map((r) => (
+                <article key={r.id} className="review-card">
+                  <header className="review-card__header">
+                    <img
+                      src={r.avatar}
+                      alt={`${r.name} profile`}
+                      className="review-card__avatar"
+                      loading="lazy"
+                      width="56"
+                      height="56"
+                    />
+                    <div className="review-card__meta">
+                      <h3 className="review-card__name">
+                        {r.name.split("\n").map((line, i) => (
+                          <span key={i}>
+                            {line}
+                            {i === 0 && <br />}
+                          </span>
+                        ))}
+                      </h3>
+                      <Stars count={r.rating} />
+                    </div>
+                  </header>
+
+                  <p className="review-card__text">"{r.text}"</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Centered CTA */}
       <div className="centered-cta" id="contact">
@@ -266,7 +361,9 @@ function LandingPage() {
         <br />
         Year-round on the San Francisco Bay
           <br />
-          Gear is included, no experience needed
+          All Equipment Provided
+          <br />
+          No Experience Needed & No Experience Like It  
           <br />
           <br />
           Golden Gate Efoil
