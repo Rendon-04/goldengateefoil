@@ -51,7 +51,7 @@ function LandingPage() {
       id: 1,
       name: "Fisherman’s\nLife",
       avatar:
-        "src/components/images/fishermansLife.jpg",
+        "/public/fishermansLife.jpg",
       rating: 5,
       text: "This is pretty cool! Damn y’all this is hella fun!",
     },
@@ -59,7 +59,7 @@ function LandingPage() {
       id: 2,
       name: "Andrewtoursf",
       avatar:
-        "/src/components/images/andrewTours.jpg",
+        "public/andrewTours.jpg",
       rating: 5,
       text:
         "Finally checked this off my SF bucket list!...it feels like you’re flying!! It was so insane…10 out of 10. I’d do this again!",
@@ -68,7 +68,7 @@ function LandingPage() {
       id: 3,
       name: "Kenziritotheburrito",
       avatar:
-        "/src/components/images/kensitotheBurritio.jpg",
+        "/public/kensitotheBurritio.jpg",
       rating: 5,
       text:
         "This was genuinely one of the most fun new activities I’ve tried in forever… Such a good instructor and we had so much fun out there. Cannot recommend enough!!!",
@@ -77,7 +77,7 @@ function LandingPage() {
       id: 4,
       name: "natalie_linan",
       avatar:
-        "/src/components/images/natalieLinan.jpg",
+        "/public/natalieLinan.jpg",
       rating: 5,
       text:
         "Are you kidding!? Seriously such a cool thing to say I have done in my life!",
@@ -86,7 +86,7 @@ function LandingPage() {
       id: 5,
       name: "nature_nomad_world",
       avatar:
-        "/src/components/images/natureNomad.jpg",
+        "/public/natureNomad.jpg",
       rating: 5,
       text:
         "Magical!!… It was an unforgettable mix of soaring over the water… filled with pure joy and adrenaline. One thing’s for sure: it was my first time, but definitely not my last…",
