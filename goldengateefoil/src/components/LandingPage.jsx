@@ -62,7 +62,7 @@ function LandingPage() {
         "/andrewTours.jpg",
       rating: 5,
       text:
-        "Finally checked this off my SF bucket list!...it feels like you’re flying!! It was so insane…10 out of 10. I’d do this again!",
+        "Finally checked this off my SF bucket list!...it feels like you’re flying!! It was so insane…10 out of 10. I’d do this again!...such a great and patient instructor!",
     },
     {
       id: 3,
@@ -90,6 +90,24 @@ function LandingPage() {
       rating: 5,
       text:
         "Magical!!… It was an unforgettable mix of soaring over the water… filled with pure joy and adrenaline. One thing’s for sure: it was my first time, but definitely not my last…",
+    },
+    {
+      id: 6,
+      name: "cheycheyfromthebay",
+      avatar:
+        "/cheycheyfromthebay.jpeg",
+      rating: 5,
+      text:
+        "Finally got to try efoiling on the bay!!! This was hands down one of the coolest SF experiences 10/10 recommend! The views are unbelievable! The feeling of being in the air & balancing is crazy!",
+    },
+    {
+      id: 7,
+      name: "kimiaskravings",
+      avatar:
+        "/kimiaskravings.jpeg",
+      rating: 5,
+      text:
+      "OMG it was a blast!…10,000/10 for fun & the backdrop!!!! Omg it was so fun!! You gotta try it…such an incredible and unforgettable experience. We absolutely LOVED our first time.",
     },
   ];
 
