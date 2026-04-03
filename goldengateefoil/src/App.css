@@ -488,6 +488,10 @@
 }
 
 .cta-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
   align-self: stretch;
   color: #000000;
   text-align: center;
@@ -503,6 +507,44 @@
   line-height: 140%;
   letter-spacing: -0.075px;
   position: relative;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.cta-group + .cta-group {
+  margin-top: 20px;
+}
+
+.cta-group--contact {
+  margin-top: 26px;
+}
+
+.cta-line {
+  color: #000000;
+  line-height: 140%;
+}
+
+.cta-line--primary {
+  font-size: 18px;
+  line-height: 135%;
+}
+
+.cta-line--secondary {
+  opacity: 0.88;
+}
+
+.cta-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
 }
 
 .cta-buttons {
@@ -575,6 +617,9 @@ a {
   border: var(--border);
   padding: 24px;
   transition: box-shadow 160ms ease, transform 160ms ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .review-card:hover {
@@ -597,6 +642,23 @@ a {
   border-radius: 50%;
   object-fit: cover;
   display: block;
+  flex-shrink: 0;
+}
+
+.review-card__avatar--fallback {
+  align-items: center;
+  background: #eef2e7;
+  color: #485c11;
+  display: flex;
+  font-family:
+    "DM Sans",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  justify-content: center;
 }
 
 .review-card__meta {
@@ -611,6 +673,19 @@ a {
   line-height: 1.1;
   color: var(--text);
   font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.review-card__source {
+  color: var(--muted);
+  font-family:
+    "Roboto Mono",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
 }
 
 /* Stars */
@@ -641,6 +716,7 @@ a {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 
@@ -888,6 +964,10 @@ a {
     padding: 40px 20px;
   }
 
+  .cta-description {
+    max-width: 460px;
+  }
+
   .features-content {
     flex-direction: column;
   }
@@ -934,6 +1014,18 @@ a {
   .content-title,
   .cta-title {
     font-size: 24px;
+  }
+
+  .cta-description {
+    max-width: 100%;
+  }
+
+  .cta-group + .cta-group {
+    margin-top: 18px;
+  }
+
+  .cta-line--primary {
+    font-size: 17px;
   }
 }
 
@@ -1023,5 +1115,3 @@ a {
     display: none;
   }
 }
-
-

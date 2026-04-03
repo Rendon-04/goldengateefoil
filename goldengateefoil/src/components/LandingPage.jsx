@@ -4,6 +4,16 @@ import TrustIcon from './images/trust.png';
 import CoachIcon from './images/coach.png';
 import QualityIcon from './images/quality.png';
 import Logo from './images/gg-logo.svg';
+import FishermansLifeAvatar from "./images/fishermansLife.jpg";
+import NatalieLinanAvatar from "./images/natalieLinan.jpg";
+import KenzAvatar from "./images/kensitotheBurritio.jpg";
+import NatureNomadAvatar from "./images/natureNomad.jpg";
+import AndrewToursAvatar from "./images/andrewTours.jpg";
+import cheycheyfromthebay from "./images/cheycheyfromthebay.jpg";
+import kimiaskravings from "./images/kimiaskravingss.jpg";
+import zoemintz from "./images/zoemintz.jpg";
+import bellabytheway from "./images/bellabytheway.jpg";
+
 import { useRef, useState, useEffect } from "react";
 
 
@@ -45,69 +55,136 @@ function LandingPage() {
       ))}
     </div>
   );
+
+  const ReviewAvatar = ({ name, avatar }) => {
+    const [hasError, setHasError] = useState(false);
+    const initials = name
+      .replace(/^@/, "")
+      .split(/[\s_]+/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((part) => part[0]?.toUpperCase())
+      .join("");
+
+    if (!avatar || hasError) {
+      return (
+        <div className="review-card__avatar review-card__avatar--fallback" aria-hidden="true">
+          {initials || "GG"}
+        </div>
+      );
+    }
+
+    return (
+      <img
+        src={avatar}
+        alt={`${name} profile`}
+        className="review-card__avatar"
+        loading="lazy"
+        width="56"
+        height="56"
+        onError={() => setHasError(true)}
+      />
+    );
+  };
   
   const reviews = [
     {
       id: 1,
       name: "Fisherman’s\nLife",
-      avatar:
-        "/fishermansLife.jpg",
+      avatar: FishermansLifeAvatar,
       rating: 5,
       text: "This is pretty cool! Damn y’all this is hella fun!",
+      source: "Instagram",
     },
     {
       id: 2,
-      name: "Andrewtoursf",
-      avatar:
-        "/andrewTours.jpg",
+      name: "@AndrewToursSf",
+      avatar: AndrewToursAvatar,
       rating: 5,
       text:
-        "Finally checked this off my SF bucket list!...it feels like you’re flying!! It was so insane…10 out of 10. I’d do this again!...such a great and patient instructor!",
+        "Finally checked this off my SF bucket list!...it feels like you’re flying!! It was so insane…10 out of 10. I’d do this again!...such a great and patient instructor!...I had so much fun learning from Goldate Gate Efoil",
+      source: "Instagram",
     },
     {
       id: 3,
       name: "Kenziritotheburrito",
-      avatar:
-        "/kensitotheBurritio.jpg",
+      avatar: KenzAvatar,
       rating: 5,
       text:
         "This was genuinely one of the most fun new activities I’ve tried in forever… Such a good instructor and we had so much fun out there. Cannot recommend enough!!!",
+      source: "Instagram",
     },
     {
       id: 4,
       name: "natalie_linan",
-      avatar:
-        "/natalieLinan.jpg",
+      avatar: NatalieLinanAvatar,
       rating: 5,
       text:
         "Are you kidding!? Seriously such a cool thing to say I have done in my life!",
+      source: "Instagram",
     },
     {
       id: 5,
       name: "nature_nomad_world",
-      avatar:
-        "/natureNomad.jpg",
+      avatar: NatureNomadAvatar,
       rating: 5,
       text:
         "Magical!!… It was an unforgettable mix of soaring over the water… filled with pure joy and adrenaline. One thing’s for sure: it was my first time, but definitely not my last…",
+      source: "Instagram",
     },
     {
       id: 6,
       name: "cheycheyfromthebay",
-      avatar:
-        "/cheycheyfromthebay.jpeg",
+      avatar: cheycheyfromthebay,
       rating: 5,
       text:
         "Finally got to try efoiling on the bay!!! This was hands down one of the coolest SF experiences 10/10 recommend! The views are unbelievable! The feeling of being in the air & balancing is crazy!",
+      source: "Instagram",
     },
     {
       id: 7,
       name: "kimiaskravings",
-      avatar:
-        "/kimiaskravings.jpeg",
+      avatar: kimiaskravings,
       rating: 5,
       text:
-      "OMG it was a blast!…10,000/10 for fun & the backdrop!!!! Omg it was so fun!! You gotta try it…such an incredible and unforgettable experience. We absolutely LOVED our first time.",
+        "OMG it was a blast!…10,000/10 for fun & the backdrop!!!! Omg it was so fun!! You gotta try it…such an incredible and unforgettable experience. We absolutely LOVED our first time.",
+      source: "Instagram",
+    },
+    {
+      id: 8,
+      name: "@Zoe Mintz",
+      avatar: zoemintz,
+      rating: 5,
+      text:
+        "10/10 would recommend...Easily one of the coolest side quests in the Bay Area. Trying a new water sport with views of San Francisco, the Golden Gate Bridge, and Alcatraz is incredible but when WHALES join in on the fun it’s a once in a lifetime experience!! And it was actually SO easy to learn how to efoil! Golden Gate Efoil was fantastic, went through the step by step instructions and guided me through the whole lesson - I even got up on my first try!! Yes, I fell, but honestly it felt nice to cool off in the water. It’s a workout! Can’t wait to try it again…Thank you SO much for a FANTASTIC morning!!! We had a blast.",
+      source: "Instagram",
+    },
+    {
+      id: 9,
+      name: "@Kassandra Soriano",
+      avatar: null,
+      rating: 5,
+      text:
+        "I recommend 100%!!!...He taught me how to do one of the coolest things you can do in the Bay Area...Before we got to the water he explained everything: the board, how it works…all the safety tips & then you just go for it…It’s such a crazy feeling you’re just gliding above the ocean. So if you live in San Francisco you have to try this at least once.",
+      source: "Instagram",
+    },
+    {
+      id: 10,
+      name: "@Bellabytheway",
+      avatar: bellabytheway,
+      rating: 5,
+      text:
+        "Had an EPIC time efoiling with Golden Gate Efoil in San Francisco, need to add this to your to do list…It was so insane! So so so so much fun!…Oh my god, this was the most incredible feeling…I’m literally flying.",
+      source: "Instagram",
+    },
+    {
+      id: 11,
+      name: "@Daniel Salinas",
+      avatar: null,
+      rating: 5,
+      text:
+        "Woke up. Got a call. Said yes. Great explanation. 10 min in the water and I was up and enjoying. Great weather. 20 min in we saw a whale. By 45 min I was having great fun and thoughts of delusion. You need to try goldengateefoil…I still have goosebumps just thinking about it.",
+      source: "Instagram",
     },
   ];
 
@@ -185,7 +262,6 @@ function LandingPage() {
      
       {/* Hero Section */}
       <div className="hero-section">
-        <div className="hero-title">Fly with the Pelicans</div>
         <div className="hero-image">
           
         <video
@@ -264,7 +340,7 @@ function LandingPage() {
                 height={24}
               />
               <div className="icon-content">
-                <div className="icon-title">Official Lift Foils Partner</div>
+                <div className="icon-title">Authorized Lift Foils Partner</div>
                 <div className="icon-description">
                   Ride the industry's top eFoil technology, trusted by
                   professionals worldwide for performance and innovation.
@@ -307,6 +383,22 @@ function LandingPage() {
                 </div>
               </div>
             </div>
+
+            <div className="icon-lockup">
+              <img
+                src={TrustIcon}
+                alt="Trust Icon"
+                className="icon"
+                width={24}
+                height={24}
+              />
+              <div className="icon-content">
+                <div className="icon-title">Year-round on the San Francisco Bay</div>
+                <div className="icon-description">
+                  Experience San Francisco’s famous landmarks and waterfront by efoil all year long
+                </div>
+              </div>
+            </div>
           </div>
           <Button className="contact-button" variant="primary" onClick={() => scrollToSection("contact")}>Contact Us</Button>
         </div>
@@ -335,21 +427,14 @@ function LandingPage() {
       <div className="content-section" id="reviews">
         <div className="content-wrapper">
           <div className="specs-label">Reviews</div>
-          <div className="content-title">What riders are saying</div>
+          <div className="content-title">What 1st time riders are saying</div>
 
           <div className="reviews">
             <div className="reviews__grid">
               {reviews.map((r) => (
                 <article key={r.id} className="review-card">
                   <header className="review-card__header">
-                    <img
-                      src={r.avatar}
-                      alt={`${r.name} profile`}
-                      className="review-card__avatar"
-                      loading="lazy"
-                      width="56"
-                      height="56"
-                    />
+                    <ReviewAvatar name={r.name} avatar={r.avatar} />
                     <div className="review-card__meta">
                       <h3 className="review-card__name">
                         {r.name.split("\n").map((line, i) => (
@@ -359,6 +444,7 @@ function LandingPage() {
                           </span>
                         ))}
                       </h3>
+                      {r.source && <div className="review-card__source">{r.source}</div>}
                       <Stars count={r.rating} />
                     </div>
                   </header>
@@ -375,24 +461,40 @@ function LandingPage() {
       <div className="centered-cta" id="contact">
         <div className="cta-title">Contact us</div>
         <div className="cta-description">
-        Private Efoil Lessons, Demos, & Guided Rides 
-        <br />
-        Year-round on the San Francisco Bay
-          <br />
-          All Equipment Provided
-          <br />
-          No Experience Needed & No Experience Like It  
-          <br />
-          <br />
-          Golden Gate Efoil
-          <br />
-          <span className="bold-text">
-            info@goldengateefoil.com
-            <br />
-            (415) 636-0577
-            <br />
-            Ask about our promo code
-          </span>
+          <div className="cta-group cta-group--primary">
+            <div className="cta-line cta-line--primary">
+              Private Efoil Lessons, Demos, & Guided Rides
+            </div>
+          </div>
+
+          <div className="cta-group">
+            <div className="cta-line cta-line--secondary">
+              Private sessions scheduled daily by appointment
+            </div>
+            <div className="cta-line cta-line--secondary">Gift cards</div>
+          </div>
+
+          <div className="cta-group">
+            <div className="cta-line cta-line--secondary">All Equipment Provided</div>
+            <div className="cta-line cta-line--secondary">
+              No Experience Needed & No Experience Like It
+            </div>
+          </div>
+
+          <div className="cta-group">
+            <div className="cta-line">Looking to purchase an efoil?</div>
+            <div className="cta-line cta-line--secondary">
+              Glad to advise on your perfect set up, ask for our promo code
+            </div>
+          </div>
+
+          <div className="cta-group cta-group--contact">
+            <div className="cta-line">Golden Gate Efoil</div>
+            <div className="cta-contact">
+              <span className="bold-text">info@goldengateefoil.com</span>
+              <span className="bold-text">(415) 636-0577</span>
+            </div>
+          </div>
         </div>
         <div className="cta-buttons">
         <a href="mailto:info@goldengateefoil.com">
