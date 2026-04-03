@@ -3,6 +3,7 @@ import InstagramIcon from "./images/instagram.png"
 import TrustIcon from './images/trust.png';
 import CoachIcon from './images/coach.png';
 import QualityIcon from './images/quality.png';
+import CalendarIcon from './images/calendar.svg';
 import Logo from './images/gg-logo.svg';
 import FishermansLifeAvatar from "./images/fishermansLife.jpg";
 import NatalieLinanAvatar from "./images/natalieLinan.jpg";
@@ -13,6 +14,8 @@ import cheycheyfromthebay from "./images/cheycheyfromthebay.jpg";
 import kimiaskravings from "./images/kimiaskravingss.jpg";
 import zoemintz from "./images/zoemintz.jpg";
 import bellabytheway from "./images/bellabytheway.jpg";
+import kassandrasuriano from "./images/kassandra.suriano.jpg"
+import salinasdanielf from "./images/salinasdanielf.jpg"
 
 import { useRef, useState, useEffect } from "react";
 
@@ -98,7 +101,7 @@ function LandingPage() {
     },
     {
       id: 2,
-      name: "@AndrewToursSf",
+      name: "AndrewToursSf",
       avatar: AndrewToursAvatar,
       rating: 5,
       text:
@@ -152,7 +155,7 @@ function LandingPage() {
     },
     {
       id: 8,
-      name: "@Zoe Mintz",
+      name: "Zoe Mintz",
       avatar: zoemintz,
       rating: 5,
       text:
@@ -161,8 +164,8 @@ function LandingPage() {
     },
     {
       id: 9,
-      name: "@Kassandra Soriano",
-      avatar: null,
+      name: "Kassandra Soriano",
+      avatar: kassandrasuriano,
       rating: 5,
       text:
         "I recommend 100%!!!...He taught me how to do one of the coolest things you can do in the Bay Area...Before we got to the water he explained everything: the board, how it works…all the safety tips & then you just go for it…It’s such a crazy feeling you’re just gliding above the ocean. So if you live in San Francisco you have to try this at least once.",
@@ -170,7 +173,7 @@ function LandingPage() {
     },
     {
       id: 10,
-      name: "@Bellabytheway",
+      name: "Bellabytheway",
       avatar: bellabytheway,
       rating: 5,
       text:
@@ -179,8 +182,8 @@ function LandingPage() {
     },
     {
       id: 11,
-      name: "@Daniel Salinas",
-      avatar: null,
+      name: "Daniel Salinas",
+      avatar: salinasdanielf,
       rating: 5,
       text:
         "Woke up. Got a call. Said yes. Great explanation. 10 min in the water and I was up and enjoying. Great weather. 20 min in we saw a whale. By 45 min I was having great fun and thoughts of delusion. You need to try goldengateefoil…I still have goosebumps just thinking about it.",
@@ -386,8 +389,8 @@ function LandingPage() {
 
             <div className="icon-lockup">
               <img
-                src={TrustIcon}
-                alt="Trust Icon"
+                src={CalendarIcon}
+                alt="Calendar Icon"
                 className="icon"
                 width={24}
                 height={24}
@@ -516,7 +519,7 @@ function LandingPage() {
             alt="efoil logo"
           />
           <div className="credits-content">
-            <div className="copyright"> 2025 Golden Gate Efoil</div>
+            <div className="copyright"> 2026 Golden Gate Efoil</div>
           </div>
           <div className="rights-reserved">All Rights Reserved</div>
         </div>
