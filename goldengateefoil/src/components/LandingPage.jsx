@@ -16,6 +16,13 @@ import zoemintz from "./images/zoemintz.jpg";
 import bellabytheway from "./images/bellabytheway.jpg";
 import kassandrasuriano from "./images/kassandra.suriano.jpg"
 import salinasdanielf from "./images/salinasdanielf.jpg"
+import gracechristianlee from "./images/gracechristianlee.jpg"
+import jacknelson from "./images/jacknelson.jpg"
+import kiramadethis from "./images/kiramadethis.jpg"
+import papamiltiadisk from "./images/papamiltiadisk.jpg"
+import sirenabainter from "./images/sirenabainter.png"
+import thebrokencompass from "./images/thebrokencompass.jpg"
+import fromthesoultothestars from "./images/fromthesoultothestars.png"
 
 import { useRef, useState, useEffect } from "react";
 
@@ -57,6 +64,27 @@ function LandingPage() {
         <span key={i} className={`star ${i < count ? "filled" : ""}`} />
       ))}
     </div>
+  );
+
+  const GlobeIcon = () => (
+    <svg
+      className="icon"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+      <path
+        d="M2 12h20M12 2c2.5 2.7 4 6.2 4 10s-1.5 7.3-4 10c-2.5-2.7-4-6.2-4-10s1.5-7.3 4-10Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 
   const ReviewAvatar = ({ name, avatar }) => {
@@ -187,6 +215,69 @@ function LandingPage() {
       rating: 5,
       text:
         "Woke up. Got a call. Said yes. Great explanation. 10 min in the water and I was up and enjoying. Great weather. 20 min in we saw a whale. By 45 min I was having great fun and thoughts of delusion. You need to try goldengateefoil…I still have goosebumps just thinking about it.",
+      source: "Instagram",
+    },
+    {
+      id: 12,
+      name: "Kiramadethis",
+      avatar: kiramadethis,
+      rating: 5,
+      text:
+        "He kept encouraging me, telling me to believe…and before I knew it I was standing on the board, riding the waves and feeling on top of the world, while catching the most beautiful sunset in front of the Golden Gate Bridge, and I’m not sure how I’ll be able to top that feeling, so you better believe I’ll be back for another round of efoiling to chase that high again...Thank you so much for the great time today, we had a blast :) truly grateful...such a great teacher...You gotta try it!!",
+      source: "Instagram",
+    },
+    {
+      id: 13,
+      name: "Grace Christian Lee",
+      avatar: gracechristianlee,
+      rating: 5,
+      text:
+        "Had the most INCREDIBLE time learning how to efoil with Golden Gate Efoil. If you’re looking for your next San Francisco side quest adventure THIS IS IT!",
+      source: "Instagram",
+    },
+    {
+      id: 14,
+      name: "Karen Guzman",
+      avatar: fromthesoultothestars,
+      rating: 5,
+      text:
+        "I just wanted to thank you again for the efoil lesson, I HAD A BLAST!! I will be joining another lesson soon. You were very clear and encouraging with your instructions...I really enjoyed it and look forward to it again.",
+      source: "Instagram",
+    },
+    {
+      id: 15,
+      name: "Jackson Nelson",
+      avatar:jacknelson,
+      rating: 5,
+      text:
+        "HIGHLY RECOMMEND. As a birthday gift, a friend of mine organized for me to take e-foil lessons with Golden Gate Efoil. It was an incredible experience! The weather was great and the view of the Golden Gate Bridge was spectacular as well. Their instructions were clear and brief; learning to ride the board was a lot easier than I expected, and before I knew it I was flyin’! I’m already looking forward to e-foil again. Don’t hesitate to book this experience, it’s awesome. Thanks Golden Gate Efoil!",
+      source: "Instagram",
+    },
+    {
+      id: 16,
+      name: "Konstantinos Papamiltiadis",
+      avatar: papamiltiadisk,
+      rating: 5,
+      text:
+        "There's a moment when the board lifts and the noise disappears - just you, suspended above the water, cutting through the Bay like you belong there. Flying low over the swells, chasing speed with nothing but salt air in your face and the Golden Gate standing watch in the distance. But it's what's beneath and beside you that hits different out here. A sea lion surfacing ten feet away, unbothered. Birds skimming the chop in formation. The cold, dark Pacific - not a turquoise postcard, but something rawer and more alive than that. This isn't tropical. This is wild. The water is 54ºF and the wildlife doesn't care that you're there - and that's exactly what makes it sacred. Thank you for the opportunity!!",
+      source: "Instagram",
+    },
+    {
+      id: 17,
+      name: "Alex and Kasey",
+      avatar: thebrokencompass,
+      rating: 5,
+      text:
+        "...I officially think that it's one of the coolest activities you can do in SF. And whether you are a local or a tourist I think it's worth doing it...we both came out of it being like this is the coolest thing ever...and you all need to try it...once you get the hang it feels like you are flying...I'm still talking about this daily...we also saw a whale in the wild and some seals...You can truly be a beginner! You need ZERO experience! You get walked through EVERYTHING and at any point you can say STOP and you will be returned to land! We were truly very nervous! We felt so safe! This is truly the COOLEST thing in San Francisco.",
+      source: "Instagram",
+    },
+    {
+      id: 18,
+      name: "Sirena Bainter",
+      avatar: sirenabainter,
+      rating: 5,
+      text:
+        "My first time out on an efoil, and I was up by the end of the lesson. So fun and he was a helpful and patient instructor, I would definitely recommend if you’re looking to see the bay from a different vantage point.",
       source: "Instagram",
     },
   ];
@@ -396,9 +487,19 @@ function LandingPage() {
                 height={24}
               />
               <div className="icon-content">
-                <div className="icon-title">Year-round on the San Francisco Bay</div>
+                <div className="icon-title">Private Sessions Daily on the San Francisco Bay</div>
                 <div className="icon-description">
-                  Experience San Francisco’s famous landmarks and waterfront by efoil all year long
+                  Experience San Francisco’s landmarks and waterfront by efoil all year long
+                </div>
+              </div>
+            </div>
+
+            <div className="icon-lockup">
+              <GlobeIcon />
+              <div className="icon-content">
+                <div className="icon-title">Eco-Friendly Experience</div>
+                <div className="icon-description">
+                  Leave no trace: 100% electric, zero emissions, & quiet
                 </div>
               </div>
             </div>
@@ -471,10 +572,8 @@ function LandingPage() {
           </div>
 
           <div className="cta-group">
-            <div className="cta-line cta-line--secondary">
-              Private sessions scheduled daily by appointment
-            </div>
             <div className="cta-line cta-line--secondary">Gift cards</div>
+            <div className="cta-line cta-line--secondary">Seen on ESPN & NBC</div>
           </div>
 
           <div className="cta-group">
@@ -487,7 +586,7 @@ function LandingPage() {
           <div className="cta-group">
             <div className="cta-line">Looking to purchase an efoil?</div>
             <div className="cta-line cta-line--secondary">
-              Glad to advise on your perfect set up, ask for our promo code
+              Glad to advise on your perfect set up and provide support after. Ask for our promo code.
             </div>
           </div>
 
@@ -505,6 +604,12 @@ function LandingPage() {
       </a>
         <a href="tel:+14156360577">
           <Button className="info-button" variant="linkout">Call us</Button>
+      </a>
+        <a href="https://www.instagram.com/goldengateefoil/" target="_blank" rel="noopener noreferrer">
+          <Button className="info-button" variant="linkout">
+            <img src={InstagramIcon} alt="" className="info-button__icon" aria-hidden="true" />
+             Instagram
+          </Button>
       </a>
         </div>
       </div>

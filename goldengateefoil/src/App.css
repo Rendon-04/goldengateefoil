@@ -876,6 +876,14 @@ a {
   opacity: 0.9;
   transition: opacity 0.2s ease;
 }
+
+.info-button__icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  filter: brightness(0) invert(1);
+}
+
 /* Responsive Design */
 @media (max-width: 1320px) {
   .landing-page {
