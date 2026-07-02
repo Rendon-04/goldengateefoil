@@ -87,6 +87,26 @@ function LandingPage() {
     </svg>
   );
 
+  const LightningIcon = () => (
+    <svg
+      className="icon"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+
   const ReviewAvatar = ({ name, avatar }) => {
     const [hasError, setHasError] = useState(false);
     const initials = name
@@ -205,7 +225,7 @@ function LandingPage() {
       avatar: bellabytheway,
       rating: 5,
       text:
-        "Had an EPIC time efoiling with Golden Gate Efoil in San Francisco, need to add this to your to do list…It was so insane! So so so so much fun!…Oh my god, this was the most incredible feeling…I’m literally flying.",
+        "Had an EPIC time efoiling with Golden Gate Efoil in San Francisco, need to add this to your to do list…It was so insane! So so so so much fun!…Oh my god, this was the most incredible feeling…I’m literally flying…Golden Gate Efoil is a 10/10 experience in my book!!",
       source: "Instagram",
     },
     {
@@ -223,7 +243,7 @@ function LandingPage() {
       avatar: kiramadethis,
       rating: 5,
       text:
-        "He kept encouraging me, telling me to believe…and before I knew it I was standing on the board, riding the waves and feeling on top of the world, while catching the most beautiful sunset in front of the Golden Gate Bridge, and I’m not sure how I’ll be able to top that feeling, so you better believe I’ll be back for another round of efoiling to chase that high again...Thank you so much for the great time today, we had a blast :) truly grateful...such a great teacher...You gotta try it!!",
+        "He kept encouraging me, telling me to believe…and before I knew it I was standing on the board, riding the waves and feeling on top of the world, while catching the most beautiful sunset in front of the Golden Gate Bridge, and I’m not sure how I’ll be able to top that feeling, so you better believe I’ll be back for another round of efoiling to chase that high again...Thank you so much for the great time today, we had a blast :) truly grateful...such a great teacher...You gotta try it!!...That was a peak SF activity! Thank you so much 🙌",
       source: "Instagram",
     },
     {
@@ -268,7 +288,7 @@ function LandingPage() {
       avatar: thebrokencompass,
       rating: 5,
       text:
-        "...I officially think that it's one of the coolest activities you can do in SF. And whether you are a local or a tourist I think it's worth doing it...we both came out of it being like this is the coolest thing ever...and you all need to try it...once you get the hang it feels like you are flying...I'm still talking about this daily...we also saw a whale in the wild and some seals...You can truly be a beginner! You need ZERO experience! You get walked through EVERYTHING and at any point you can say STOP and you will be returned to land! We were truly very nervous! We felt so safe! This is truly the COOLEST thing in San Francisco.",
+        "I officially think that it's one of the coolest activities you can do in SF. And whether you are a local or a tourist I think it's worth doing it...we both came out of it being like this is the coolest thing ever...and you all need to try it...once you get the hang it feels like you are flying...I'm still talking about this daily...we also saw a whale in the wild and some seals...You can truly be a beginner! You need ZERO experience! You get walked through EVERYTHING and at any point you can say STOP and you will be returned to land! We were truly very nervous! We felt so safe! This is truly the COOLEST thing in San Francisco...Literally still on cloud 9!!!!",
       source: "Instagram",
     },
     {
@@ -284,6 +304,10 @@ function LandingPage() {
 
   return (
     <div className="landing-page">
+      <div className="announcement-bar">
+        <a href="tel:+14156360577">Schedule your lesson (415) 636-0577</a>
+      </div>
+
       {/* Navigation */}
       <div className="navigation-wrapper">
         <div className="navigation">
@@ -451,7 +475,7 @@ function LandingPage() {
                 height={24}
               />
               <div className="icon-content">
-                <div className="icon-title">500+ Efoil Lessons Taught</div>
+                <div className="icon-title">1,000+ Efoil Lessons Taught</div>
                 <div className="icon-description">
                   Learn with an expert instructor who's guided hundreds of
                   riders safely into the world of eFoiling.
@@ -497,9 +521,19 @@ function LandingPage() {
             <div className="icon-lockup">
               <GlobeIcon />
               <div className="icon-content">
-                <div className="icon-title">Eco-Friendly Experience</div>
+                <div className="icon-title">Eco-Friendly</div>
                 <div className="icon-description">
                   Leave no trace: 100% electric, zero emissions, & quiet
+                </div>
+              </div>
+            </div>
+
+            <div className="icon-lockup">
+              <LightningIcon />
+              <div className="icon-content">
+                <div className="icon-title">An Electrifying Experience</div>
+                <div className="icon-description">
+                  No Experience Like It & No Experience Needed
                 </div>
               </div>
             </div>
@@ -578,21 +612,19 @@ function LandingPage() {
 
           <div className="cta-group">
             <div className="cta-line cta-line--secondary">All Equipment Provided</div>
-            <div className="cta-line cta-line--secondary">
-              No Experience Needed & No Experience Like It
-            </div>
           </div>
 
           <div className="cta-group">
             <div className="cta-line">Looking to purchase an efoil?</div>
             <div className="cta-line cta-line--secondary">
-              Glad to advise on your perfect set up and provide support after. Ask for our promo code.
+              Glad to advise on your perfect set up and provide support after. Ask for our Instructor discount code.
             </div>
           </div>
 
           <div className="cta-group cta-group--contact">
             <div className="cta-line">Golden Gate Efoil</div>
             <div className="cta-contact">
+              <span>San Francisco, California</span>
               <span className="bold-text">info@goldengateefoil.com</span>
               <span className="bold-text">(415) 636-0577</span>
             </div>
