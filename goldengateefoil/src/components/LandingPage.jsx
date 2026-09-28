@@ -31,6 +31,7 @@ import { useRef, useState, useEffect } from "react";
 function LandingPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef(null);
+  const [reviewPage, setReviewPage] = useState(0);
 
   function scrollToSection(id) {
     const section = document.getElementById(id);
@@ -145,7 +146,7 @@ function LandingPage() {
       avatar: FishermansLifeAvatar,
       rating: 5,
       text: "This is pretty cool! Damn y’all this is hella fun!",
-      source: "Instagram",
+    
     },
     {
       id: 2,
@@ -154,7 +155,7 @@ function LandingPage() {
       rating: 5,
       text:
         "Finally checked this off my SF bucket list!...it feels like you’re flying!! It was so insane…10 out of 10. I’d do this again!...such a great and patient instructor!...I had so much fun learning from Goldate Gate Efoil",
-      source: "Instagram",
+    
     },
     {
       id: 3,
@@ -163,7 +164,7 @@ function LandingPage() {
       rating: 5,
       text:
         "This was genuinely one of the most fun new activities I’ve tried in forever… Such a good instructor and we had so much fun out there. Cannot recommend enough!!!",
-      source: "Instagram",
+    
     },
     {
       id: 4,
@@ -172,7 +173,7 @@ function LandingPage() {
       rating: 5,
       text:
         "Are you kidding!? Seriously such a cool thing to say I have done in my life!",
-      source: "Instagram",
+    
     },
     {
       id: 5,
@@ -181,7 +182,7 @@ function LandingPage() {
       rating: 5,
       text:
         "Magical!!… It was an unforgettable mix of soaring over the water… filled with pure joy and adrenaline. One thing’s for sure: it was my first time, but definitely not my last…",
-      source: "Instagram",
+    
     },
     {
       id: 6,
@@ -189,8 +190,8 @@ function LandingPage() {
       avatar: cheycheyfromthebay,
       rating: 5,
       text:
-        "Finally got to try efoiling on the bay!!! This was hands down one of the coolest SF experiences 10/10 recommend! The views are unbelievable! The feeling of being in the air & balancing is crazy!",
-      source: "Instagram",
+        "Finally got to try efoiling on the bay!!! This was hands down one of the coolest SF experiences 10/10 recommend! The views are unbelievable! The feeling of being in the air & balancing is crazy!…it was truly epic!...Whether you’re a total beginner or already have experience on the water, Golden Gate Efoil has you covered!",
+    
     },
     {
       id: 7,
@@ -199,7 +200,7 @@ function LandingPage() {
       rating: 5,
       text:
         "OMG it was a blast!…10,000/10 for fun & the backdrop!!!! Omg it was so fun!! You gotta try it…such an incredible and unforgettable experience. We absolutely LOVED our first time.",
-      source: "Instagram",
+    
     },
     {
       id: 8,
@@ -208,7 +209,7 @@ function LandingPage() {
       rating: 5,
       text:
         "10/10 would recommend...Easily one of the coolest side quests in the Bay Area. Trying a new water sport with views of San Francisco, the Golden Gate Bridge, and Alcatraz is incredible but when WHALES join in on the fun it’s a once in a lifetime experience!! And it was actually SO easy to learn how to efoil! Golden Gate Efoil was fantastic, went through the step by step instructions and guided me through the whole lesson - I even got up on my first try!! Yes, I fell, but honestly it felt nice to cool off in the water. It’s a workout! Can’t wait to try it again…Thank you SO much for a FANTASTIC morning!!! We had a blast.",
-      source: "Instagram",
+    
     },
     {
       id: 9,
@@ -216,8 +217,8 @@ function LandingPage() {
       avatar: kassandrasuriano,
       rating: 5,
       text:
-        "I recommend 100%!!!...He taught me how to do one of the coolest things you can do in the Bay Area...Before we got to the water he explained everything: the board, how it works…all the safety tips & then you just go for it…It’s such a crazy feeling you’re just gliding above the ocean. So if you live in San Francisco you have to try this at least once.",
-      source: "Instagram",
+        "I recommend 100%!!!...He taught me how to do one of the coolest things you can do in the Bay Area...he’s the best instructor you could ask for: super reassuring, very patient, and always right there…Before we got to the water he explained everything: the board, how it works…all the safety tips & then you just go for it…It’s such a crazy feeling you’re just gliding above the ocean. So if you live in San Francisco you have to try this at least once.",
+    
     },
     {
       id: 10,
@@ -226,7 +227,7 @@ function LandingPage() {
       rating: 5,
       text:
         "Had an EPIC time efoiling with Golden Gate Efoil in San Francisco, need to add this to your to do list…It was so insane! So so so so much fun!…Oh my god, this was the most incredible feeling…I’m literally flying…Golden Gate Efoil is a 10/10 experience in my book!!",
-      source: "Instagram",
+    
     },
     {
       id: 11,
@@ -234,8 +235,8 @@ function LandingPage() {
       avatar: salinasdanielf,
       rating: 5,
       text:
-        "Woke up. Got a call. Said yes. Great explanation. 10 min in the water and I was up and enjoying. Great weather. 20 min in we saw a whale. By 45 min I was having great fun and thoughts of delusion. You need to try goldengateefoil…I still have goosebumps just thinking about it.",
-      source: "Instagram",
+        "Top 10 experiences in my life...Amazing day!...Woke up. Got a call. Said yes. Great explanation. 10 min in the water and I was up and enjoying. Great weather. 20 min in we saw a whale. By 45 min I was having great fun and thoughts of delusion. You need to try Golden Gate Efoil...I still have goosebumps just thinking about it.",
+    
     },
     {
       id: 12,
@@ -243,8 +244,8 @@ function LandingPage() {
       avatar: kiramadethis,
       rating: 5,
       text:
-        "He kept encouraging me, telling me to believe…and before I knew it I was standing on the board, riding the waves and feeling on top of the world, while catching the most beautiful sunset in front of the Golden Gate Bridge, and I’m not sure how I’ll be able to top that feeling, so you better believe I’ll be back for another round of efoiling to chase that high again...Thank you so much for the great time today, we had a blast :) truly grateful...such a great teacher...You gotta try it!!...That was a peak SF activity! Thank you so much 🙌",
-      source: "Instagram",
+        "Learned how to efoil (surfing on x-games mode)...Highly recommend! 🏄‍♀️...He kept encouraging me, telling me to believe…and before I knew it I was standing on the board, riding the waves and feeling on top of the world, while catching the most beautiful sunset in front of the Golden Gate Bridge, and I’m not sure how I’ll be able to top that feeling, so you better believe I’ll be back for another round of efoiling to chase that high again...Thank you so much for the great time today, we had a blast :) truly grateful...such a great teacher...You gotta try it!!...That was a peak SF activity! Thank you so much 🙌",
+    
     },
     {
       id: 13,
@@ -253,7 +254,7 @@ function LandingPage() {
       rating: 5,
       text:
         "Had the most INCREDIBLE time learning how to efoil with Golden Gate Efoil. If you’re looking for your next San Francisco side quest adventure THIS IS IT!",
-      source: "Instagram",
+    
     },
     {
       id: 14,
@@ -262,7 +263,7 @@ function LandingPage() {
       rating: 5,
       text:
         "I just wanted to thank you again for the efoil lesson, I HAD A BLAST!! I will be joining another lesson soon. You were very clear and encouraging with your instructions...I really enjoyed it and look forward to it again.",
-      source: "Instagram",
+    
     },
     {
       id: 15,
@@ -271,7 +272,7 @@ function LandingPage() {
       rating: 5,
       text:
         "HIGHLY RECOMMEND. As a birthday gift, a friend of mine organized for me to take e-foil lessons with Golden Gate Efoil. It was an incredible experience! The weather was great and the view of the Golden Gate Bridge was spectacular as well. Their instructions were clear and brief; learning to ride the board was a lot easier than I expected, and before I knew it I was flyin’! I’m already looking forward to e-foil again. Don’t hesitate to book this experience, it’s awesome. Thanks Golden Gate Efoil!",
-      source: "Instagram",
+    
     },
     {
       id: 16,
@@ -280,7 +281,7 @@ function LandingPage() {
       rating: 5,
       text:
         "There's a moment when the board lifts and the noise disappears - just you, suspended above the water, cutting through the Bay like you belong there. Flying low over the swells, chasing speed with nothing but salt air in your face and the Golden Gate standing watch in the distance. But it's what's beneath and beside you that hits different out here. A sea lion surfacing ten feet away, unbothered. Birds skimming the chop in formation. The cold, dark Pacific - not a turquoise postcard, but something rawer and more alive than that. This isn't tropical. This is wild. The water is 54ºF and the wildlife doesn't care that you're there - and that's exactly what makes it sacred. Thank you for the opportunity!!",
-      source: "Instagram",
+    
     },
     {
       id: 17,
@@ -289,7 +290,7 @@ function LandingPage() {
       rating: 5,
       text:
         "I officially think that it's one of the coolest activities you can do in SF. And whether you are a local or a tourist I think it's worth doing it...we both came out of it being like this is the coolest thing ever...and you all need to try it...once you get the hang it feels like you are flying...I'm still talking about this daily...we also saw a whale in the wild and some seals...You can truly be a beginner! You need ZERO experience! You get walked through EVERYTHING and at any point you can say STOP and you will be returned to land! We were truly very nervous! We felt so safe! This is truly the COOLEST thing in San Francisco...Literally still on cloud 9!!!!",
-      source: "Instagram",
+    
     },
     {
       id: 18,
@@ -298,9 +299,59 @@ function LandingPage() {
       rating: 5,
       text:
         "My first time out on an efoil, and I was up by the end of the lesson. So fun and he was a helpful and patient instructor, I would definitely recommend if you’re looking to see the bay from a different vantage point.",
-      source: "Instagram",
+    
+    },
+    {
+      id: 19,
+      name: "Kaylin JH",
+      avatar: "/kaylin_jh.jpg",
+      rating: 5,
+      text:
+        "What a bucket list experience!...This was seriously the BEST EXPERIENCE EVER. Golden Gate eFoil is incredible. Encouraging, fun, excited and ready to take it as slow or as fast as you want. He strikes a perfect balance of teaching and letting you figure it out for yourself. And not to mention the setting!!! I could not have imagined a more serene and exciting way to experience San Francisco. I love Golden Gate eFoil!!!...We can’t stop talking about how much fun we had.",
+    
+    },
+    {
+      id: 20,
+      name: "Dani Skova",
+      avatar: "/daniskov.jpg",
+      rating: 5,
+      text:
+        "Couldn’t recommend an eFoiling session with Golden Gate Efoil more! My roommate and I had the best morning out on the Bay with him. He was incredibly patient and gave such clear, helpful instruction that we were both up on the board by our third try!! It was such a quintessential San Francisco experience and one of the most memorable mornings we’ve had. Highly recommend!",
+    
+    },
+    {
+      id: 21,
+      name: "Mya Rose",
+      avatar: "/myarosemiller_.jpg",
+      rating: 5,
+      text:
+        "Thanks for a great morning!...He was a wonderful instructor and we had a great first session efoiling! He prioritized our safety but also made sure we had fun and encouraged us to keep going...It was such a unique experience…it felt so good to get out on the water first thing in the morning with incredible views of the Golden Gate Bridge...we’re excited to come back and keep working on our skills!",
+    
+    },
+    {
+      id: 22,
+      name: "Tahj Atkinson",
+      avatar: "/tahjytahj.jpg",
+      rating: 5,
+      text:
+        "10/10 recommend....Alright so Efoiling genuinely one of the best, most fun experiences I’ve ever had. The closest thing I’ve done to flying. It feels like you’re just flying on the water. Definitely going to do it again...Epic day efoiling with Golden Gate Efoil.",
+    
+    },
+    {
+      id: 23,
+      name: "Charissalikesstoeat",
+      avatar: "/charlilikestoeat.jpg",
+      rating: 5,
+      text:
+        "Genuinely a ten out of ten day...Hands down one of the most fun things I've done in San Francisco. Efoiling feels like flying and Golden Gate Efoil made it so easy to learn...Most surreal thing ever...You just float in the air and it's actually crazy you're right next to the Golden Gate Bridge too. And the water it's not cold whatsoever. It's so nice. I highly recommend it. This is perfect. Oh my gosh. I've never swam here. I'm so tempted to go out more in the ocean these days now...Efoiling is so much fun. I highly recommend it. Please do it if you are in San Francisco.",
+    
     },
   ];
+
+  const reviewsPerPage = 4;
+  const reviewPageCount = Math.ceil(reviews.length / reviewsPerPage);
+  const reviewStart = reviewPage * reviewsPerPage;
+  const averageRating = reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length;
 
   return (
     <div className="landing-page">
@@ -560,40 +611,62 @@ function LandingPage() {
       </div>
 
 
-       {/* Reviews */}
-     {/* Reviews */}
-      <div className="content-section" id="reviews">
-        <div className="content-wrapper">
-          <div className="specs-label">Reviews</div>
-          <div className="content-title">What 1st time riders are saying</div>
-
-          <div className="reviews">
-            <div className="reviews__grid">
-              {reviews.map((r) => (
-                <article key={r.id} className="review-card">
-                  <header className="review-card__header">
-                    <ReviewAvatar name={r.name} avatar={r.avatar} />
-                    <div className="review-card__meta">
-                      <h3 className="review-card__name">
-                        {r.name.split("\n").map((line, i) => (
-                          <span key={i}>
-                            {line}
-                            {i === 0 && <br />}
-                          </span>
-                        ))}
-                      </h3>
-                      {r.source && <div className="review-card__source">{r.source}</div>}
-                      <Stars count={r.rating} />
-                    </div>
-                  </header>
-
-                  <p className="review-card__text">"{r.text}"</p>
-                </article>
-              ))}
+      {/* Reviews */}
+      <section className="content-section reviews-section" id="reviews" aria-labelledby="reviews-title">
+        <div className="reviews">
+          <div className="reviews__heading">
+            <div>
+              <div className="specs-label">Reviews</div>
+              <h2 className="content-title" id="reviews-title">What 1st time riders are saying</h2>
+            </div>
+            <div className="reviews__summary">
+              <Stars count={averageRating} />
+              <span><strong>{averageRating.toFixed(1)}</strong> from {reviews.length} reviews</span>
             </div>
           </div>
+
+          <div className="reviews__grid" id="reviews-grid">
+            {reviews.map((r, index) => (
+              <article
+                key={r.id}
+                className="review-card"
+                aria-hidden={Math.floor(index / reviewsPerPage) !== reviewPage}
+                style={{
+                  "--review-column": (index % 2) + 1,
+                  "--review-row": Math.floor((index % reviewsPerPage) / 2) + 1,
+                }}
+              >
+                <Stars count={r.rating} />
+                <p className="review-card__text">"{r.text}"</p>
+                <footer className="review-card__header">
+                  <ReviewAvatar name={r.name} avatar={r.avatar} />
+                  <div className="review-card__meta">
+                    <h3 className="review-card__name">{r.name}</h3>
+                    {r.source && <div className="review-card__source">{r.source}</div>}
+                  </div>
+                </footer>
+              </article>
+            ))}
+          </div>
+
+          <nav className="reviews__pagination" aria-label="Review pagination">
+            <p className="reviews__range" role="status" aria-live="polite" aria-atomic="true">
+              Showing {reviewStart + 1}–{Math.min(reviewStart + reviewsPerPage, reviews.length)} of {reviews.length} reviews
+            </p>
+            <div className="reviews__controls">
+              <button type="button" aria-label="Previous page of reviews" aria-controls="reviews-grid"
+                disabled={reviewPage === 0} onClick={() => setReviewPage((page) => Math.max(0, page - 1))}>
+                <span aria-hidden="true">←</span> Previous
+              </button>
+              <span className="reviews__page">{reviewPage + 1} of {reviewPageCount}</span>
+              <button type="button" aria-label="Next page of reviews" aria-controls="reviews-grid"
+                disabled={reviewPage === reviewPageCount - 1} onClick={() => setReviewPage((page) => Math.min(reviewPageCount - 1, page + 1))}>
+                Next <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </nav>
         </div>
-      </div>
+      </section>
 
       {/* Centered CTA */}
       <div className="centered-cta" id="contact">
@@ -603,6 +676,10 @@ function LandingPage() {
             <div className="cta-line cta-line--primary">
               Private Efoil Lessons, Demos, & Guided Rides
             </div>
+            <div className="cta-line cta-line--secondary">
+              All inclusive private 2-hour sessions for first time efoilers through experts
+            </div>
+            <div className="cta-line cta-line--secondary">All sessions by appointment</div>
           </div>
 
           <div className="cta-group">
